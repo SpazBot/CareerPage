@@ -8,11 +8,18 @@
 /* Body style section. Mostly used for background style.*/
 body
 {
+    /* I found flex-direction columns worked better for this since I'm emulating a mobile style design. Mostly preference though I suppose.*/
     display: flex;
     flex-direction: column;
+
     min-height: 100vh;
+    min-width: 100vw;
+    padding: 1vh;
     background-color:rgb(41, 34, 43);
+    /*Super cool homemade star pattern background. Scales nicely cause it's an svg and repeats nicely because I'm an artistic genius. */
     background-image: url("../assets/coloredStars.svg");
+
+    /*FIX ME: If it's going to be a backup option it needs to actually trigger and not just be commented out*/
 
     /* BACKUP STAR PATTERN MADE PURELY WITH CSS IN CASE BACKGROUND IMG SVG FAILS
     background: linear-gradient(45deg, #353241, #7257c5);
@@ -27,7 +34,7 @@ body
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
-
+/*Style used for frosted glass wrapper that goes around much of the pages content.*/
 .glassWrapper
 {
     display: grid;
@@ -46,6 +53,7 @@ body
     align-self: center;
 }
 
+/*Exclusively used for the neon sign header section at the moment*/
 .headerDiv
 {
     display: flex;
@@ -53,6 +61,7 @@ body
     align-self: center;
 }
 
+/*Style section for the neon flashing sign header.*/
 .neonText 
 {
     font-family: 'Brush Script MT', cursive;
@@ -66,7 +75,7 @@ body
 
 }
 
-/* Flickering animation */
+/* Flickering animation for the neon sign header*/
 @keyframes flicker 
 {
     0%, 18%, 22%, 25%, 53%, 57%, 100% 
@@ -88,6 +97,7 @@ body
     }    
 }
 
+/*Grid layout organization for the content section*/
 .contentDiv
 {
     grid-column: 1 / 3;
@@ -95,6 +105,7 @@ body
     padding: 2%;
 }
 
+/*Font styling for the content section*/
 .contentText 
 {
     font-family: 'Courier New', Courier, monospace;
@@ -102,6 +113,7 @@ body
     color: #ffffff;
 }
 
+/*Grid layout organization for the profile picture on the home page*/
 .homePFP
 {
     grid-column: 3;
@@ -109,6 +121,7 @@ body
     padding: 2%;
 }
 
+/*Image manipulation by element ID for the profile picture on the home page*/
 #homePFP
 {
     max-width: 100%;
@@ -127,6 +140,7 @@ body
     justify-content: center;
     align-self: center;
 }
+
 /*Style for main menus children list elements*/
 .menu li
 {
@@ -140,6 +154,7 @@ body
     transform: rotate(0deg) translateX(160px);
 }
 
+/*Rotation animation for navigation menu list items when activated. Weirdly enough, 220deg works better than 180? Presumably due to icon size.*/
 .menu.active li
 {
     transform: rotate(calc(220deg / 6 * var(--i)));
@@ -161,6 +176,7 @@ body
     transition: 0.5s;
 }
 
+/*Change icon color on mouse hover.*/
 .menu li a:hover
 {
     color: #9957c5;
