@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>SpazBot: Home</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="headerDiv">
+        <h1 class="neonText">Hi There</h1>
+    </div>
+    
+    <div class="glassWrapper">
+
+        <div class="contentDiv">
+            <p class="contentText">My name is Erik. Although online I mostly go by SpazBot.</p>
+            <br>
+            <p class="contentText">This is my website where I show off my personal projects and what I've been learning lately.</p>
+            <br>
+            <p class="contentText">I'm currently experimenting with creating a more ergonomic web experience akin to what users are used to seeing in mobile applications.
+                Instead of a conventional navigation bar, try using the radial menu at the bottom!
+            </p>
+        </div>
+
+        <div class="homePFP">
+            <img id="homePFP" src="./assets/PFP.png">
+        </div>
+    </div>
+
+    <nav class="menu">
+        <div class="toggle"><ion-icon name="add"></ion-icon></div>
+            <li style="--i:0;">
+                <a href="./index.html"><ion-icon name="home-outline"></ion-icon></a>
+            </li>
+            <li style="--i:1;">
+                <a href="./pages/audio.html"><ion-icon name="musical-notes-outline"></ion-icon></a>
+            </li>
+            <li style="--i:2;">
+                <a href="./pages/art.html"><ion-icon name="brush-outline"></ion-icon></a>
+            </li>
+            <li style="--i:3;">
+                <a href="./pages/code.html"><ion-icon name="code-outline"></ion-icon></a>
+            </li>
+            <li style="--i:4;">
+                <a href="./pages/photography.html"><ion-icon name="camera-outline"></ion-icon></a>
+            </li>
+            <li style="--i:5;">
+                <a href="./pages/contact.html"><ion-icon name="mail-outline"></ion-icon></a>
+            </li>
+    </nav>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let toggle = document.querySelector('.toggle')
+        let menu = document.querySelector('.menu')
+        toggle.onclick = function(){
+            menu.classList.toggle('active')
+        }
+    </script>
+</body>

@@ -1,0 +1,190 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style section. Mostly used for background style.*/
+body
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color:rgb(41, 34, 43);
+    background-image: url("../assets/coloredStars.svg");
+
+    /* BACKUP STAR PATTERN MADE PURELY WITH CSS IN CASE BACKGROUND IMG SVG FAILS
+    background: linear-gradient(45deg, #353241, #7257c5);
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+    */
+
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+
+.glassWrapper
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-style: outset;
+    border-color: rgba(255, 255, 255, 0.10);
+    border-width: 5px;
+    border-radius: 2%;
+    backdrop-filter: blur(4px);
+    width: 80vw;
+    height: 80vh;
+    justify-content: center;
+    align-self: center;
+}
+
+.headerDiv
+{
+    display: flex;
+    padding: 1%;
+    align-self: center;
+}
+
+.neonText 
+{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 10vw;
+    animation: flicker 5s infinite alternate;
+    color: #fff;
+    background-color:rgba(32, 30, 34, 0.85);
+    border-radius: 50%;
+    border-style: inset;
+    border-color: #ffffff;
+
+}
+
+/* Flickering animation */
+@keyframes flicker 
+{
+    0%, 18%, 22%, 25%, 53%, 57%, 100% 
+    {
+        text-shadow:
+        0 0 4px #e0e0e0,
+        0 0 11px #e0e0e0,
+        0 0 19px #e0e0e0,
+        0 0 40px #ae00ff,
+        0 0 80px #ae00ff,
+        0 0 90px #ae00ff,
+        0 0 100px #ae00ff,
+        0 0 150px #ae00ff;
+    }
+    
+    20%, 24%, 55% 
+    {        
+        text-shadow: none;
+    }    
+}
+
+.contentDiv
+{
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    padding: 2%;
+}
+
+.contentText 
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5vw;
+    color: #ffffff;
+}
+
+.homePFP
+{
+    grid-column: 3;
+    grid-row: 2 / 4;
+    padding: 2%;
+}
+
+#homePFP
+{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20%;
+}
+
+/*Style for main menu node*/
+.menu
+{
+    position: fixed;
+    bottom: 4%;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+/*Style for main menus children list elements*/
+.menu li
+{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    list-style: none;
+    transform-origin: 200px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(160px);
+}
+
+.menu.active li
+{
+    transform: rotate(calc(220deg / 6 * var(--i)));
+}
+
+.menu li a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50%;
+    transform: rotate(calc(220deg / -6 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    color: #111;
+    transition: 0.5s;
+}
+
+.menu li a:hover
+{
+    color: #9957c5;
+}
+
+.toggle
+{
+    position: absolute;
+    bottom: 0px;
+    width: 120px;
+    height: 120px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0,0,0,0.15);
+    font-size: 2em;
+    transition: transform 1.25s;
+}
+
+.menu.active .toggle
+{
+    transform: rotate(315deg);
+}
