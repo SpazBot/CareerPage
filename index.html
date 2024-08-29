@@ -1,5 +1,6 @@
 <!--Developed by Erik Dohr for CSC1010 @ Red Rocks Community College-->
 <!DOCTYPE html>
+
 <head>
     <meta charset="utf-8">
     <title>SpazBot: Home</title>
@@ -11,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="headerDiv">
         <h1 class="neonText">Hi There</h1>
@@ -18,25 +20,28 @@
     
     <div class="glassWrapper">
 
-        <div class="contentDiv">
-            <p class="contentText">My name is Erik. Although online I mostly go by SpazBot.</p>
-            <br>
-            <p class="contentText">This website started out as a class assignment but is growing into a place where I show off my personal projects and what I've been learning lately.</p>
-            <br>
-            <p class="contentText">I'm currently experimenting with creating a more ergonomic web experience akin to what users are used to seeing in mobile applications.
-                Instead of a conventional navigation bar, try using the radial menu at the bottom!
-            </p>
+        <div class="indexGreeting">
+            <div class="contentDiv">
+                <h3 id="nametag">My Name Is Erik.<br>But You Can Call Me SpazBot.</h3>
+                <br>
+                <p>This website started out as a class assignment but is growing into a place where I show off my personal projects and what I've been learning lately.</p>
+                <br>
+                <p>I'm currently experimenting with creating a more ergonomic web experience akin to what users are used to seeing in mobile applications.
+                    Instead of a conventional navigation bar, try using the radial menu at the bottom!
+                </p>
+            </div>
+
+            <div class="homePFP">
+                <img id="homePFP" src="./assets/PFP.png">
+            </div>
         </div>
-
-        <div class="homePFP">
-            <img id="homePFP" src="./assets/PFP.png">
+        
+        <div class="indexTiles">
+            <div id="tile1"><h2>Art</h2></div>
+            <div id="tile2"><h2>Audio</h2></div>
+            <div id="tile3"><h2>Code</h2></div>
+            <div id="tile4"><h2>Photos</h2></div>
         </div>
-
-        <div id="tile1"></div>
-        <div id="tile2"></div>
-        <div id="tile3"></div>
-        <div id="tile4"></div>
-
     </div>
 
     <nav class="menu">

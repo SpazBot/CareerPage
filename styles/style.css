@@ -37,10 +37,6 @@ body
 /*Style used for frosted glass wrapper that goes around much of the pages content.*/
 .glassWrapper
 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
     background-color: rgba(255, 255, 255, 0.1);
     border-style: outset;
     border-color: rgb(167, 167, 167);
@@ -51,6 +47,7 @@ body
     height: fit-content;
     justify-content: center;
     align-self: center;
+    padding: 2rem;
 }
 
 /*Exclusively used for the neon sign header section at the moment*/
@@ -97,16 +94,45 @@ body
     }    
 }
 
+.indexGreeting
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.indexTiles
+{
+    display: grid;
+    grid-template-columns: 4 1fr;
+    gap: 10px;
+}
+
 /*Grid layout organization for the content section*/
-.contentDiv
+.glassWrapper .contentDiv
 {
     grid-column: 1 / 4;
-    grid-row: 2 / 4;
+    grid-row: 1 / 4;
     padding: 2%;
 }
 
-/*Font styling for the content section*/
-.contentText 
+/*General text content styling*/
+h2
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3vw;
+    color: #ffffff;
+}
+
+h3
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2vw;
+    color: #ffffff;
+}
+
+p
 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5vw;
@@ -114,11 +140,19 @@ body
 }
 
 /*Grid layout organization for the profile picture on the home page*/
-.homePFP
+.glassWrapper .homePFP
 {
     grid-column: 4;
-    grid-row: 2 / 4;
+    grid-row: 1 / 4;
     padding: 2%;
+}
+
+#nametag
+{
+    background-color: #797979e3;
+    border: 4px outset #444444;
+    border-radius: 2% / 20%;
+    padding-left: 5%;
 }
 
 /*Image manipulation by element ID for the profile picture on the home page*/
@@ -129,8 +163,9 @@ body
     border-radius: 20%;
 }
 
-.gallery3col
+.glassWrapper .gallery3col
 {
+    grid-row: 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
@@ -142,49 +177,54 @@ body
 
 #tile1
 {
-    background: url(../assets/ArtTile.png) 30% 70% no-repeat; /* 50% 50% centers image in div */
-    width: 15vw;
-    height: 30vw;
+    background: url(../assets/ArtTile.png) 15% 30% no-repeat; /* 50% 50% centers image in div */
+    width: 1fr;
+    height: 70vh;
     grid-column: 1;
     grid-row: 5;
-    border: 6px solid black;
-    border-radius: 10%;
+    border-radius: 10% / 5%;
+    text-align: center;
 }
 #tile2
 {
-    background: url(../assets/AudioTile.png) 50% 50% no-repeat;
-    width: 15vw;
-    height: 30vw;
+    background: url(../assets/AudioTile.png) 50% 0% no-repeat;
+    width: 1fr;
+    height: 70vh;
     grid-column: 2;
     grid-row: 5;
-    border: 6px solid black;
-    border-radius: 10%;
+    border-radius: 10% / 5%;
+    text-align: center;
 }
 #tile3
 {
-    background: url(../assets/CodeTile.png) 50% 50% no-repeat; 
-    width: 15vw;
-    height: 30vw;
+    background: url(../assets/CodeTile.png) no-repeat; 
+    width: 1fr;
+    height: 70vh;
     grid-column: 3;
     grid-row: 5;
-    border: 6px solid black;
-    border-radius: 10%;
+    border-radius: 10% / 5%;
+    text-align: center;
 }
 #tile4
 {
     background: url(../assets/PhotographyTile.jpg) 50% 50% no-repeat; 
-    width: 15vw;
-    height: 30vw;
+    width: 1fr;
+    height: 70vh;
     grid-column: 4;
     grid-row: 5;
-    border: 6px solid black;
-    border-radius: 10%;
+    border-radius: 10% / 5%;
+    text-align: center;
+}
+
+#audioHeader
+{
+    text-align: center;
 }
 
 .album
 {
     max-width: 20vw;
-    max-height: 20vw;
+    max-height: 40vw;
     border: 4px solid black;
     border-radius: 2%;
     transition: box-shadow 0.3s ease;
@@ -195,6 +235,25 @@ body
 .album:hover 
 {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.2);
+}
+
+.glassWrapper .photoGallery
+{
+    columns: 15rem 4;
+    gap: 1.4rem;
+    align-content: center;
+}
+
+.glassWrapper .photoGallery img
+{
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.7rem;
+}
+
+.glassWrapper .photoGallery img:hover
+{
     transform: scale(1.2);
 }
 
@@ -235,8 +294,8 @@ body
     justify-content: center;
     align-items: center;
     align-self: center;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     background: #ffffff;
     border-radius: 50%;
     transform: rotate(calc(220deg / -6 * var(--i)));
