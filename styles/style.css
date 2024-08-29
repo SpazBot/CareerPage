@@ -145,6 +145,7 @@ p
     grid-column: 4;
     grid-row: 1 / 4;
     padding: 2%;
+    max-width: 40vw;
 }
 
 #nametag
@@ -179,7 +180,7 @@ p
 {
     background: url(../assets/ArtTile.png) 15% 30% no-repeat; /* 50% 50% centers image in div */
     width: 1fr;
-    height: 70vh;
+    height: 40vmax;
     grid-column: 1;
     grid-row: 5;
     border-radius: 10% / 5%;
@@ -189,7 +190,7 @@ p
 {
     background: url(../assets/AudioTile.png) 50% 0% no-repeat;
     width: 1fr;
-    height: 70vh;
+    height: 40vmax;
     grid-column: 2;
     grid-row: 5;
     border-radius: 10% / 5%;
@@ -199,7 +200,7 @@ p
 {
     background: url(../assets/CodeTile.png) no-repeat; 
     width: 1fr;
-    height: 70vh;
+    height: 40vmax;
     grid-column: 3;
     grid-row: 5;
     border-radius: 10% / 5%;
@@ -209,7 +210,7 @@ p
 {
     background: url(../assets/PhotographyTile.jpg) 50% 50% no-repeat; 
     width: 1fr;
-    height: 70vh;
+    height: 40vmax;
     grid-column: 4;
     grid-row: 5;
     border-radius: 10% / 5%;
