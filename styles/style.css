@@ -64,7 +64,7 @@ body
 /*Style section for the neon flashing sign header.*/
 .neonText 
 {
-    font-family: 'Brush Script MT', cursive;
+    font-family: "Neonderthaw", cursive;
     font-size: 10vw;
     animation: flicker 5s infinite alternate;
     color: #fff;

@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>SpazBot: Art</title>
-    <link rel="icon" type="image/x-icon" href="../assets/Favicon.svg">
-    <link rel="stylesheet" href="../styles/style.css">
-
+    <title>SpazBot: Template</title>
+    <link rel="icon" type="image/x-icon" href="./assets/Favicon.svg">
+    <link rel="stylesheet" href="./styles/style.css">
+    
     <!--Following lines are for getting the custom neon sign font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="headerDiv">
-        <h1 class="neonText">2D & 3D Art</h1>
+        <!--Page Header Goes Here-->
     </div>
-
+    
     <div class="glassWrapper">
-        <img src="../assets/Handshotgun.png" alt="A CAD render of a shotgun.">
+        <div class="contentDiv">
+            <!--Page Content Goes Here-->
+        </div>
     </div>
 
+    <!--This animated menu is used in place of a conventional nav bar-->
     <nav class="menu">
         <div class="toggle"><ion-icon name="add"></ion-icon></div>
             <li style="--i:0;">
-                <a href="../index.html"><ion-icon name="home-outline"></ion-icon></a>
+                <a href="./index.html"><ion-icon name="home-outline"></ion-icon></a>
             </li>
             <li style="--i:1;">
-                <a href="./audio.html"><ion-icon name="musical-notes-outline"></ion-icon></a>
+                <a href="./pages/audio.html"><ion-icon name="musical-notes-outline"></ion-icon></a>
             </li>
             <li style="--i:2;">
-                <a href="./art.html"><ion-icon name="brush-outline"></ion-icon></a>
+                <a href="./pages/art.html"><ion-icon name="brush-outline"></ion-icon></a>
             </li>
             <li style="--i:3;">
-                <a href="./code.html"><ion-icon name="code-outline"></ion-icon></a>
+                <a href="./pages/code.html"><ion-icon name="code-outline"></ion-icon></a>
             </li>
             <li style="--i:4;">
-                <a href="./photography.html"><ion-icon name="camera-outline"></ion-icon></a>
+                <a href="./pages/photography.html"><ion-icon name="camera-outline"></ion-icon></a>
             </li>
             <li style="--i:5;">
-                <a href="./contact.html"><ion-icon name="mail-outline"></ion-icon></a>
+                <a href="./pages/contact.html"><ion-icon name="mail-outline"></ion-icon></a>
             </li>
     </nav>
+
+    <!--Gets the library of icon svgs from the open source ionicon project so I don't have to store them all.-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <!--Scripting for on click functions to make the nav menu work-->
     <script>
         let toggle = document.querySelector('.toggle')
         let menu = document.querySelector('.menu')
-        toggle.onclick = function(){
+        toggle.onclick = function()
+        {
             menu.classList.toggle('active')
         }
     </script>
