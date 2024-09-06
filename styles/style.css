@@ -258,6 +258,16 @@ p
     transform: scale(1.2);
 }
 
+.glassWrapper .artGallery img
+{
+    max-width: 100%;
+}
+
+.glassWrapper .artGallery img:hover
+{
+    transform: scale(1.2);
+}
+
 /*Style for main menu node*/
 .menu
 {
