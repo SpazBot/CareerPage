@@ -280,7 +280,9 @@ p
 /*Style for main menu node*/
 .menu
 {
-    position: fixed;
+    /*Apperently sticky is better supported for mobile than fixed*/
+    position: -webkit-sticky;
+    position: sticky;
     bottom: 4%;
     width: 400px;
     height: 400px;
