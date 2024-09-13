@@ -102,13 +102,6 @@ body
     grid-auto-rows: minmax(100px, auto);
 }
 
-.indexTiles
-{
-    display: grid;
-    grid-template-columns: 4 1fr;
-    gap: 10px;
-}
-
 /*Grid layout organization for the content section*/
 .glassWrapper .contentDiv
 {
@@ -176,9 +169,17 @@ p
     padding: 10%;
 }
 
+.indexTiles
+{
+    display: grid;
+    grid-template-columns: 4 1fr;
+    gap: 10px;
+}
+
 #tile1
 {
-    background: url(../assets/ArtTile.png) 15% 30% no-repeat; /* 50% 50% centers image in div */
+    background: url(../assets/ArtTile.png) 50% 50% no-repeat; /* 50% 50% centers image in div */
+    background-size: 20vw 80vh;
     width: 1fr;
     height: 40vmax;
     grid-column: 1;
@@ -189,6 +190,7 @@ p
 #tile2
 {
     background: url(../assets/AudioTile.png) 50% 0% no-repeat;
+    background-size: 20vw 80vh;
     width: 1fr;
     height: 40vmax;
     grid-column: 2;
@@ -199,6 +201,7 @@ p
 #tile3
 {
     background: url(../assets/CodeTile.png) no-repeat; 
+    background-size: 20vw 80vh;
     width: 1fr;
     height: 40vmax;
     grid-column: 3;
@@ -209,6 +212,7 @@ p
 #tile4
 {
     background: url(../assets/PhotographyTile.jpg) 50% 50% no-repeat; 
+    background-size: 20vw 80vh;
     width: 1fr;
     height: 40vmax;
     grid-column: 4;
