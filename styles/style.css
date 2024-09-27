@@ -1,9 +1,15 @@
+/*CSS Reset Rule*/
 *
 {
     margin: 0;
-    padding: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
     box-sizing: border-box;
 }
+
+/*Generic and Mobile Style Rules*/
 
 /* Body style section. Mostly used for background style.*/
 body
@@ -101,7 +107,7 @@ body
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(auto, auto);
 }
 
 /*Grid layout organization for the content section*/
@@ -167,7 +173,7 @@ p
 #tile1
     {
         background: url(../assets/ArtTile.png) 50% 50% no-repeat; /* 50% 50% centers image in div */
-        background-size: 80vw 20vh;
+        background-size: auto auto;
         width: auto;
         height: 40vmax;
         border-radius: 10% / 5%;
@@ -176,7 +182,7 @@ p
     #tile2
     {
         background: url(../assets/AudioTile.png) 50% 0% no-repeat;
-        background-size: 80vw 20vh;
+        background-size: auto auto;
         width: auto;
         height: 40vmax;
         border-radius: 10% / 5%;
@@ -185,7 +191,7 @@ p
     #tile3
     {
         background: url(../assets/CodeTile.png) no-repeat; 
-        background-size: 80vw 20vh;
+        background-size: auto auto;
         width: auto;
         height: 40vmax;
         border-radius: 10% / 5%;
@@ -194,7 +200,7 @@ p
     #tile4
     {
         background: url(../assets/PhotographyTile.jpg) 50% 50% no-repeat; 
-        background-size: 80vw 20vh;
+        background-size: auto auto;
         width: auto;
         height: 40vmax;
         border-radius: 10% / 5%;
@@ -396,7 +402,7 @@ figure:hover figcaption{
     #tile1
     {
         background: url(../assets/ArtTile.png) 50% 50% no-repeat; /* 50% 50% centers image in div */
-        background-size: 20vw 80vh;
+        background-size: 80vw 40vh;
         width: auto;
         height: 40vmax;
         grid-column: 1;
