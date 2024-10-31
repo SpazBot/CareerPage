@@ -391,7 +391,8 @@ figure:hover figcaption{
     transform: rotate(315deg);
 }
 
-@media screen and (min-width: 650px), print{
+/*Small devices (Phones)*/
+@media screen and (min-width: 576px), print{
     .indexTiles
     {
         display: grid;
@@ -402,7 +403,7 @@ figure:hover figcaption{
     #tile1
     {
         background: url(../assets/ArtTile.png) 50% 50% no-repeat; /* 50% 50% centers image in div */
-        background-size: 80vw 40vh;
+        background-size: 20vw 80vh;
         width: auto;
         height: 40vmax;
         grid-column: 1;
@@ -443,4 +444,19 @@ figure:hover figcaption{
         border-radius: 10% / 5%;
         text-align: center;
     }
+}
+
+/*Medium Devices (tablets)*/
+@media screen and (min-width: 768) {
+    
+}
+
+/* Large devices (desktops)*/
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops)*/
+@media (min-width: 1200px) {
+    
 }
