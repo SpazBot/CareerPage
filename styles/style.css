@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 
-/*Generic and Mobile Style Rules*/
+/*Generic Style Rules*/
 
 /* Body style section. Mostly used for background style.*/
 body
@@ -25,21 +25,6 @@ body
     /*Super cool homemade star pattern background. Scales nicely cause it's an svg and repeats nicely because I'm an artistic genius. */
     background-image: url("../assets/coloredStars.svg");
     background-repeat: round;
-
-    /*FIX ME: If it's going to be a backup option it needs to actually trigger and not just be commented out*/
-
-    /* BACKUP STAR PATTERN MADE PURELY WITH CSS IN CASE BACKGROUND IMG SVG FAILS
-    background: linear-gradient(45deg, #353241, #7257c5);
-    background-image:
-    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-    radial-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.15) 1px, transparent 30px),
-    radial-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.1) 2px, transparent 40px),
-    radial-gradient(rgba(255,255,255,.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
-    
-
-    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-    */
 }
 
 /*Style used for frosted glass wrapper that goes around much of the pages content.*/
@@ -105,31 +90,40 @@ body
 .indexGreeting
 {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 2fr 2fr 1fr;
     gap: 10px;
     grid-auto-rows: minmax(auto, auto);
 }
 
 /*Grid layout organization for the content section*/
-.glassWrapper .contentDiv
+.glassWrapper #nametag
 {
     grid-column: 1 / span 2;
-    grid-row: 1 / 4;
+    grid-row: 1;
+    padding: 2%;
+    height: fit-content;
+    align-self: center;
+}
+
+.glassWrapper .contentDiv
+{
+    grid-column: 1 / span 3;
+    grid-row: 2 / 4;
     padding: 2%;
 }
 
-/*General text content styling*/
+/*Large display text content styling*/
 h2
 {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 3vw;
+    font-size: 4vw;
     color: #ffffff;
 }
 
 h3
 {
     font-family: "Edu QLD Beginner", cursive;
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: bold;
     color: #ffffff;
 }
@@ -138,7 +132,7 @@ p
 {
     font-family: "Edu QLD Beginner", cursive;
     font-weight: normal;
-    font-size: 1.5vw;
+    font-size: 3vw;
     color: #ffffff;
 }
 
@@ -146,9 +140,10 @@ p
 .glassWrapper .homePFP
 {
     grid-column: 3;
-    grid-row: 1 / 4;
+    grid-row: 1;
     padding: 2%;
-    max-width: 40vw;
+    width: 25vw;
+    justify-self: right;
 }
 
 #nametag
@@ -171,42 +166,47 @@ p
     display: block;
 }
 
+
 #tile1
-    {
-        background: url(../assets/ArtTile.png) 50% 50% no-repeat; /* 50% 50% centers image in div */
-        background-size: auto auto;
-        width: auto;
-        height: 40vmax;
-        border-radius: 10% / 5%;
-        text-align: center;
-    }
-    #tile2
-    {
-        background: url(../assets/AudioTile.png) 50% 0% no-repeat;
-        background-size: auto auto;
-        width: auto;
-        height: 40vmax;
-        border-radius: 10% / 5%;
-        text-align: center;
-    }
-    #tile3
-    {
-        background: url(../assets/CodeTile.png) no-repeat; 
-        background-size: auto auto;
-        width: auto;
-        height: 40vmax;
-        border-radius: 10% / 5%;
-        text-align: center;
-    }
-    #tile4
-    {
-        background: url(../assets/PhotographyTile.jpg) 50% 50% no-repeat; 
-        background-size: auto auto;
-        width: auto;
-        height: 40vmax;
-        border-radius: 10% / 5%;
-        text-align: center;
-    }
+{
+    background: url(../assets/ArtTile.png) 50% 50% no-repeat; /* 50% 50% centers image in div */
+    background-size: 100% 100%;
+    width: auto;
+    height: 30vmax;
+    border-radius: 10% / 5%;
+    text-align: center;
+    margin: 1% 0;
+}
+#tile2
+{
+    background: url(../assets/AudioTile.png) 50% 0% no-repeat;
+    background-size: 100% 100%;
+    width: auto;
+    height: 30vmax;
+    border-radius: 10% / 5%;
+    text-align: center;
+    margin: 1% 0;
+}
+#tile3
+{
+    background: url(../assets/CodeTile.png) no-repeat; 
+    background-size: 100% 100%;
+    width: auto;
+    height: 30vmax;
+    border-radius: 10% / 5%;
+    text-align: center;
+    margin: 1% 0;
+}
+#tile4
+{
+    background: url(../assets/PhotographyTile.jpg) 50% 50% no-repeat; 
+    background-size: 100% 100%;
+    width: auto;
+    height: 30vmax;
+    border-radius: 10% / 5%;
+    text-align: center;
+    margin: 1% 0;
+}
 
 /*Generic Audio Page Style Rules*/
 #audioHeader
@@ -289,7 +289,6 @@ p
 .menu
 {
     /*Apperently sticky is better supported for mobile than fixed*/
-    position: -webkit-sticky;
     position: sticky;
     bottom: 4%;
     width: 400px;
@@ -363,59 +362,6 @@ p
     transform: rotate(315deg);
 }
 
-/*Small devices (Phones)*/
-.indexTiles
-{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
-}
-
-#tile1
-{
-    background: url(../assets/ArtTile.png) 50% 50% no-repeat; /* 50% 50% centers image in div */
-    background-size: 20vw 80vh;
-    width: auto;
-    height: 40vmax;
-    grid-column: 1;
-    grid-row: 5;
-    border-radius: 10% / 5%;
-    text-align: center;
-}
-#tile2
-{
-    background: url(../assets/AudioTile.png) 50% 0% no-repeat;
-    background-size: 20vw 80vh;
-    width: auto;
-    height: 40vmax;
-    grid-column: 2;
-    grid-row: 5;
-    border-radius: 10% / 5%;
-    text-align: center;
-}
-#tile3
-{
-    background: url(../assets/CodeTile.png) no-repeat; 
-    background-size: 20vw 80vh;
-    width: auto;
-    height: 40vmax;
-    grid-column: 3;
-    grid-row: 5;
-    border-radius: 10% / 5%;
-    text-align: center;
-}
-#tile4
-{
-    background: url(../assets/PhotographyTile.jpg) 50% 50% no-repeat; 
-    background-size: 20vw 80vh;
-    width: auto;
-    height: 40vmax;
-    grid-column: 4;
-    grid-row: 5;
-    border-radius: 10% / 5%;
-    text-align: center;
-}
-
 .glassWrapper .albumCollection
 {
     grid-row: 2;
@@ -454,6 +400,15 @@ p
 
 /*Medium Devices (tablets)*/
 @media screen and (min-width: 768px) {
+    /*Small devices (Phones)*/
+    
+    .indexTiles
+    {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+    }
+    
     .glassWrapper .albumCollection
     {
         grid-row: 2;
@@ -502,6 +457,29 @@ p
 
 /* Large devices (desktops)*/
 @media (min-width: 992px) {
+    /*Large display text content styling*/
+    h2
+    {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 3vw;
+        color: #ffffff;
+    }
+
+    h3
+    {
+        font-family: "Edu QLD Beginner", cursive;
+        font-size: 3vw;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    p
+    {
+        font-family: "Edu QLD Beginner", cursive;
+        font-weight: normal;
+        font-size: 1.5vw;
+        color: #ffffff;
+    }
     
 }
 
