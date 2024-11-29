@@ -235,7 +235,7 @@ p
 }
 
 @keyframes appear{
-    0%    { opacity: 0; }
+    0%    { opacity: 0.5; }
     100%  { opacity: 1; }
 }
 
@@ -367,12 +367,14 @@ p
     grid-row: 2;
     display: inline-block;
     padding: 5%;
+    margin-bottom: 20%;
     clear: left;
+    height: auto;
 }
 
 .albumCollection figure
 {
-    margin: 5% 0;
+    margin: 1%;
 }
 
 .album
