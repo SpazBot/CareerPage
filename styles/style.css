@@ -37,7 +37,7 @@ body
     border-radius: 2%;
     backdrop-filter: blur(4px);
     width: 80vw;
-    height: fit-content;
+    height:auto;
     justify-content: center;
     align-self: center;
     padding: 2rem;
@@ -263,7 +263,7 @@ p
 
 .glassWrapper .photoGallery img:hover
 {
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 
 .glassWrapper .artGallery img
