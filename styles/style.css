@@ -268,13 +268,14 @@ p
 
 .glassWrapper .artGallery img
 {
+    display: block;
     max-width: 100%;
+    border-radius: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.glassWrapper .artGallery img:hover
-{
-    transform: scale(1.2);
-}
+
 
 #cubeTutorial
 {
