@@ -37,7 +37,7 @@ body
     border-radius: 2%;
     backdrop-filter: blur(4px);
     width: 80vw;
-    height: fit-content;
+    height:auto;
     justify-content: center;
     align-self: center;
     padding: 2rem;
@@ -235,7 +235,7 @@ p
 }
 
 @keyframes appear{
-    0%    { opacity: 0; }
+    0%    { opacity: 0.5; }
     100%  { opacity: 1; }
 }
 
@@ -263,7 +263,7 @@ p
 
 .glassWrapper .photoGallery img:hover
 {
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 
 .glassWrapper .artGallery img
@@ -368,12 +368,14 @@ p
     grid-row: 2;
     display: inline-block;
     padding: 5%;
+    margin-bottom: 20%;
     clear: left;
+    height: auto;
 }
 
 .albumCollection figure
 {
-    margin: 5% 0;
+    margin: 1%;
 }
 
 .album
@@ -496,7 +498,7 @@ textarea {
     h3
     {
         font-family: "Edu QLD Beginner", cursive;
-        font-size: 3vw;
+        font-size: 2vw;
         font-weight: bold;
         color: #ffffff;
     }
@@ -505,7 +507,7 @@ textarea {
     {
         font-family: "Edu QLD Beginner", cursive;
         font-weight: normal;
-        font-size: 1.5vw;
+        font-size: 1vw;
         color: #ffffff;
     }
     
