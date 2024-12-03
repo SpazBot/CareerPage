@@ -219,16 +219,36 @@ p
     font-weight: bolder;
 }
 
+.glassWrapper .albumCollection
+{
+    display: block;
+}
+
+.albumCollection figure{
+    position: relative;
+    max-width: 60vw;
+    border-radius: 2%;
+    background-color: rgb(27, 25, 31);
+    color: white;
+    transition: box-shadow 0.3s ease;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    margin: 1%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .albumCollection figcaption{
     display: none;
+    position: relative;
 }
 
 .albumCollection figure:hover 
 {
+    z-index: 1000;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     transform: scale(1.5);
-    z-index: 1000;
     animation-duration: 1s;
     animation-name: appear;
     animation-direction: alternate;
@@ -240,11 +260,12 @@ p
 }
 
 .albumCollection figure:hover figcaption{
+    z-index: auto;
     display: block;
     padding: 2%;
     font-family: "Edu QLD Beginner", cursive;
     font-weight: 400;
-    font-size: 3vw;
+    font-size: 5em;
 }
 
 .glassWrapper .photoGallery
@@ -366,16 +387,11 @@ p
 .glassWrapper .albumCollection
 {
     grid-row: 2;
-    display: inline-block;
+    display: block;
     padding: 5%;
     margin-bottom: 20%;
     clear: left;
     height: auto;
-}
-
-.albumCollection figure
-{
-    margin: 1%;
 }
 
 .album
@@ -389,16 +405,6 @@ p
 .albumCollection audio
 {
     width:60vw;
-}
-
-.albumCollection figure{
-    max-width: 60vw;
-    border-radius: 2%;
-    background-color: rgb(27, 25, 31);
-    color: white;
-    transition: box-shadow 0.3s ease;
-    transform: scale(1);
-    transition: transform 0.3s ease;
 }
 
 input{
@@ -429,8 +435,7 @@ textarea {
   }
 
 /*Medium Devices (tablets)*/
-@media screen and (min-width: 768px) {
-    /*Small devices (Phones)*/
+@media (min-width: 768px), screen and (orientation: landscape) {
     
     .indexTiles
     {
@@ -438,55 +443,18 @@ textarea {
         grid-template-columns: auto auto auto auto;
         gap: 10px;
     }
-    
-    .glassWrapper .albumCollection
-    {
-        grid-row: 2;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-auto-rows: auto;
-        row-gap: 10%;
-        column-gap: 5%;
-        box-sizing: border-box;
-        padding: 5%;
-        clear: left;
-    }
-
-    .album
-    {
-        max-width: 20vw;
-        max-height: 40vw;
-        border: 4px solid rgb(27, 25, 31);
-        border-radius: 2%;
-    }
-
-    .albumCollection audio
-    {
-        width:20vw;
-    }
-
-    .albumCollection figure{
-        max-width: 20vw;
-        border-radius: 2%;
-        background-color: rgb(27, 25, 31);
-        color: white;
-        transition: box-shadow 0.3s ease;
-        transform: scale(1);
-        transition: transform 0.3s ease;
-        margin: 0;
-    }
 
     .albumCollection figure:hover figcaption{
         display: block;
         padding: 2%;
         font-family: "Edu QLD Beginner", cursive;
         font-weight: 400;
-        font-size: 1vw;
+        font-size: 1em;
     }
 }
 
 /* Large devices (desktops)*/
-@media (min-width: 992px) {
+@media (min-width: 992px), screen and (orientation: landscape) {
     /*Large display text content styling*/
     h2
     {
@@ -510,10 +478,39 @@ textarea {
         font-size: 1vw;
         color: #ffffff;
     }
+
+    .glassWrapper .albumCollection
+    {
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-auto-rows: auto;
+        row-gap: 10%;
+        column-gap: 5%;
+        box-sizing: border-box;
+        padding: 5%;
+        clear: left;
+    }
+
+    .album
+    {
+        max-width: 20vw;
+        max-height: 40vw;
+    }
+
+    .albumCollection audio
+    {
+        width:20vw;
+    }
+
+    .albumCollection figure{
+        max-width: 20vw;
+        margin-bottom: 0;
+    }
     
 }
 
 /* Extra large devices (large desktops)*/
-@media (min-width: 1200px) {
+@media (min-width: 1200px), screen and (orientation: landscape) {
     
 }
