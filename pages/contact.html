@@ -29,19 +29,21 @@
             Check out the form below to shoot me an email.
         </p>
         
-        <form method="post" name="contact_form"
-        action="../scripts/contact-form-handler.php">
-            Your Name:
-            <input type="text" name="name">
+        <form action="send_email.php" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
             <br>
-            Email Address:
-            <input type="text" name="email">
+           
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
             <br>
-            Message:
-            <textarea name="message"></textarea>
-
-            <input type="submit" value="Submit">
-        </form>	
+           
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+           
+            <input type="submit" value="Send">
+          </form>
     </div>
 
     <nav class="menu">
