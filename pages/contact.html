@@ -25,25 +25,24 @@
     </div>
 
     <div class="glassWrapper">
-        <p class="contentText">Wow! Thanks for wanting to talk to me about all the junk I make.
+        <h3>Wow! Thanks for wanting to talk to me about all the junk I make.
             Check out the form below to shoot me an email.
         </p>
+        <br>
         
-        <form action="send_email.php" method="post">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
+        <!-- modify this form HTML and place wherever you want your form -->
+        <form id="my-form" action="https://formspree.io/f/xdkobywn" method="POST">
+            <label>Email:</label>
             <br>
-           
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" name="email" />
             <br>
-           
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <label>Message:</label>
             <br>
-           
-            <input type="submit" value="Send">
-          </form>
+            <textarea type="text" name="message" id="contact-message"></textarea>
+            <br><br>
+            <button id="my-form-button">Submit</button>
+            <p id="my-form-status"></p>
+        </form>
     </div>
 
     <nav class="menu">
@@ -76,5 +75,36 @@
         toggle.onclick = function(){
             menu.classList.toggle('active')
         }
+
+        var form = document.getElementById("my-form");
+  
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+            }).then(response => {
+            if (response.ok) {
+                status.innerHTML = "Thanks for your submission!";
+                form.reset()
+            } else {
+                response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                    status.innerHTML = "Oops! There was a problem submitting your form"
+                }
+                })
+            }
+            }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
     </script>
 </body>
