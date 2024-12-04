@@ -122,7 +122,7 @@ h2
 
 h3
 {
-    font-family: "Edu QLD Beginner", cursive;
+    font-family: "Edu QLD Beginner", sans-serif;
     font-size: 3vw;
     font-weight: bold;
     color: #ffffff;
@@ -130,7 +130,7 @@ h3
 
 p
 {
-    font-family: "Edu QLD Beginner", cursive;
+    font-family: "Edu QLD Beginner", sans-serif;
     font-weight: normal;
     font-size: 3vw;
     color: #ffffff;
@@ -263,7 +263,7 @@ p
     z-index: auto;
     display: block;
     padding: 2%;
-    font-family: "Edu QLD Beginner", cursive;
+    font-family: "Edu QLD Beginner", sans-serif;
     font-weight: 400;
     font-size: 5em;
 }
@@ -447,7 +447,7 @@ textarea {
     .albumCollection figure:hover figcaption{
         display: block;
         padding: 2%;
-        font-family: "Edu QLD Beginner", cursive;
+        font-family: "Edu QLD Beginner", sans-serif;
         font-weight: 400;
         font-size: 1em;
     }
@@ -458,14 +458,14 @@ textarea {
     /*Large display text content styling*/
     h2
     {
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Courier New', Courier, serif;
         font-size: 3vw;
         color: #ffffff;
     }
 
     h3
     {
-        font-family: "Edu QLD Beginner", cursive;
+        font-family: "Edu QLD Beginner", serif;
         font-size: 2vw;
         font-weight: bold;
         color: #ffffff;
@@ -473,9 +473,9 @@ textarea {
 
     p
     {
-        font-family: "Edu QLD Beginner", cursive;
+        font-family: "Edu QLD Beginner", monospace;
         font-weight: normal;
-        font-size: 1vw;
+        font-size: 1.5em;
         color: #ffffff;
     }
 
