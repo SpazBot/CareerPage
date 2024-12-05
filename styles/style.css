@@ -103,6 +103,7 @@ body
     padding: 2%;
     height: fit-content;
     align-self: center;
+    text-shadow: 2px 2px 2px black;
 }
 
 .glassWrapper .contentDiv
@@ -296,7 +297,27 @@ p
     margin-right: auto;
 }
 
+article{
+    padding: 1%;
+}
 
+article:first-of-type{
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+
+article:nth-of-type(odd){
+    background-color: rgba(255, 255, 255, 0.1)
+}
+
+article:nth-of-type(even){
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+article:last-of-type{
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+}
 
 #cubeTutorial
 {
