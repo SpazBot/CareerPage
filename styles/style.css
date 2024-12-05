@@ -434,10 +434,6 @@ textarea {
     color: white;
   }
 
-#contact-message{
-    height: 30vh;
-}
-
 /*Medium Devices (tablets)*/
 @media (min-width: 768px), screen and (orientation: landscape) {
     
