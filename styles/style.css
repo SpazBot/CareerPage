@@ -307,6 +307,11 @@ p
     display: block;
 }
 
+footer{
+    position: sticky;
+    bottom: 1%;
+}
+
 /*Style for main menu node*/
 .menu
 {
