@@ -1,3 +1,4 @@
+//Developed by Erik Dohr for CWB1010
 import * as THREE from 'three';
 
 const scene = new THREE.Scene();
