@@ -1,4 +1,7 @@
+<!--Developed by Erik Dohr for CSC1010 @ Red Rocks Community College-->
 <!DOCTYPE html>
+
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>SpazBot: Art</title>
@@ -8,7 +11,7 @@
     <!--Following lines are for getting the custom neon sign font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&family=Neonderthaw&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,23 +21,38 @@
 
     <div class="glassWrapper">
         <div class="artGallery">
+            <article>
+            <img src="../assets/Art/TMA-Background-Alt.png" alt="The Magnus Archives fan art.">
+            <p class="contentText">
+                I wasn't sure where to put this article since it's a bit of a two pronged project. I'm working on an interactive fan site for one of my favorite
+                podcasts, "The Magnus Archives". The site has some original art, some reused official assets, and quite a bit of code but for now I think I'll tease it here 
+                until it's a bit more developed.
+            </p>
+            </article>
+
+            <article>
             <img src="../assets/Art/Handshotgun.png" alt="A CAD render of a shotgun.">
             <p class="contentText">
                 A friend of mine did some fantasy weapon sketches for a game we were working on. 
                 Although my background is mostly in Blender modeling, at the time I was also experimenting with CAD for 3D printing purposes. 
                 This was the result.
             </p>
+            </article>
+
+            <article>
             <img src="../assets/Art/Cabin.png" alt="A Blender render of a Cabin">
             <p class="contentText">
                 This is a render of an asset for a game I've been working on set in the Great White North.
                 It uses purely procedurally generated textures because Adobe Substance Painter is expensive and I'm a better programmer than I am artist.
                 Certain aspects like the snow and icicles are also procedural, which has been very useful for other parts of the game.
             </p>
+            </article>
         </div>
     </div>
 
     <nav class="menu">
         <div class="toggle"><ion-icon name="add"></ion-icon></div>
+        <ul>
             <li style="--i:0;">
                 <a href="../index.html"><ion-icon name="home-outline"></ion-icon></a>
             </li>
@@ -53,7 +71,13 @@
             <li style="--i:5;">
                 <a href="./contact.html"><ion-icon name="mail-outline"></ion-icon></a>
             </li>
+        </ul>
     </nav>
+
+    <footer>
+        <a href="https://github.com/SpazBot"><ion-icon size="large" name="logo-github"></ion-icon></a>
+    </footer>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -65,3 +89,4 @@
         }
     </script>
 </body>
+</html>

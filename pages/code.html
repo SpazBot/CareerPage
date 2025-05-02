@@ -1,4 +1,6 @@
+<!--Developed by Erik Dohr for CSC1010 @ Red Rocks Community College-->
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>SpazBot: Coding</title>
@@ -8,7 +10,7 @@
     <!--Following lines are for getting the custom neon sign font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&family=Neonderthaw&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -30,7 +32,6 @@
                 I wholeheartedly recommend it to fellow learners.
             </p>
         </article>
-        <br>
         
         <article>
             <h3>Concurrency in C</h3>
@@ -41,10 +42,10 @@
                 is an incredibly important tool for developers, especially in the graphics rendering pipeline.<br>
                 Check out my developer log video below to learn more!
             </p>
+            <aside>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/dLAbKLLHKJs?si=eWmPoqndxo2HZs67" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+            </aside>
         </article>
-        <br>
 
         <!--Three.js & WebGL render starts here-->
         <article>
@@ -53,7 +54,7 @@
                 This little beauty is the product of two tech marvels: the WebGL JavaScript API which allows for the rendering of interactive
                 2D & 3D graphics without plugins, and Three.js library which greatly simplifies the 3D part of that equation. 
             </p>
-            <script id="cubeTutorial" type="module" src="../scripts/main.js"></script>
+            <script id="cubeTutorial" type="module" src="../scripts/cube.js"></script>
             <p>
                 While this isn't anything revolutionary (in fact it's the basic tutorial for using Three.js), it's new and incredibly exciting to me.
             </p>
@@ -61,11 +62,13 @@
             <p id="cabinDescription">
                 Isn't it neat?
             </p>
+            <!--<script id="cabin" type="module" src="../scripts/cabin.js"></script>-->
         </article>
     </div>
 
     <nav class="menu">
         <div class="toggle"><ion-icon name="add"></ion-icon></div>
+        <ul>
             <li style="--i:0;">
                 <a href="../index.html"><ion-icon name="home-outline"></ion-icon></a>
             </li>
@@ -84,7 +87,12 @@
             <li style="--i:5;">
                 <a href="./contact.html"><ion-icon name="mail-outline"></ion-icon></a>
             </li>
+        </ul>
     </nav>
+
+    <footer>
+        <a href="https://github.com/SpazBot"><ion-icon size="large" name="logo-github"></ion-icon></a>
+    </footer>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -97,3 +105,4 @@
         }
     </script>
 </body>
+</html>

@@ -1,79 +1,88 @@
 <!--Developed by Erik Dohr for CSC1010 @ Red Rocks Community College-->
 <!DOCTYPE html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpazBot: Home</title>
-    <link rel="icon" type="image/x-icon" href="./assets/Favicon.svg">
-    <link rel="stylesheet" href="./styles/style.css">
-    
-    <!--Following lines are for getting the custom neon sign font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&family=Neonderthaw&display=swap" rel="stylesheet">
-</head>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SpazBot: Home</title>
+        <link rel="icon" type="image/x-icon" href="./assets/Favicon.svg">
+        <link rel="stylesheet" href="./styles/style.css">
+        
+        <!--Following lines are for getting the custom fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&family=Neonderthaw&display=swap" rel="stylesheet">
+    </head>
 
-<body>
-    <div class="headerDiv">
-        <h1 class="neonText">Hi There</h1>
-    </div>
-    
-    <div class="glassWrapper">
-
-        <div class="indexGreeting">
-            <h3 id="nametag">My Name Is Erik.<br>But You Can Call Me SpazBot.</h3>
-            <div class="contentDiv">
-                <p>This website started out as a class assignment but is growing into a place where I show off my personal projects and what I've been learning lately.</p>
-                <br>
-                <p>I'm currently experimenting with creating a more ergonomic web experience akin to what users are used to seeing in mobile applications.
-                    Instead of a conventional navigation bar, try using the radial menu at the bottom!
-                </p>
-            </div>
-
-            <div class="homePFP">
-                <img id="homePFP" src="./assets/PFP.png">
-            </div>
+    <body>
+        <div class="headerDiv">
+            <h1 class="neonText">Hi There</h1>
         </div>
         
-        <div class="indexTiles">
-            <div id="tile1"><h2>Art</h2></div>
-            <div id="tile2"><h2>Audio</h2></div>
-            <div id="tile3"><h2>Code</h2></div>
-            <div id="tile4"><h2>Photos</h2></div>
+        <div class="glassWrapper">
+
+            <div class="indexGreeting">
+                <h3 id="nametag">My Name Is Erik.<br>But You Can Call Me SpazBot.</h3>
+                <div class="contentDiv">
+                    <p>This website started out as a class assignment but is growing into a place where I show off my personal projects and what I've been learning lately.</p>
+                    <br>
+                    <p>I'm currently experimenting with creating a more ergonomic web experience akin to what users are used to seeing in mobile applications.
+                        Instead of a conventional navigation bar, try using the radial menu at the bottom!
+                    </p>
+                </div>
+
+                <div class="homePFP">
+                    <img id="homePFP" src="./assets/PFP.png" alt="SpazBot profile picture.">
+                </div>
+            </div>
+            
+            <div class="indexTiles">
+                <div id="tile1"><h2>Art</h2></div>
+                <div id="tile2"><h2>Audio</h2></div>
+                <div id="tile3"><h2>Code</h2></div>
+                <div id="tile4"><h2>Photos</h2></div>
+            </div>
         </div>
-    </div>
 
-    <nav class="menu">
-        <div class="toggle"><ion-icon name="add"></ion-icon></div>
-            <li style="--i:0;">
-                <a href="./index.html"><ion-icon name="home-outline"></ion-icon></a>
-            </li>
-            <li style="--i:1;">
-                <a href="./pages/audio.html"><ion-icon name="musical-notes-outline"></ion-icon></a>
-            </li>
-            <li style="--i:2;">
-                <a href="./pages/art.html"><ion-icon name="brush-outline"></ion-icon></a>
-            </li>
-            <li style="--i:3;">
-                <a href="./pages/code.html"><ion-icon name="code-outline"></ion-icon></a>
-            </li>
-            <li style="--i:4;">
-                <a href="./pages/photography.html"><ion-icon name="camera-outline"></ion-icon></a>
-            </li>
-            <li style="--i:5;">
-                <a href="./pages/contact.html"><ion-icon name="mail-outline"></ion-icon></a>
-            </li>
-    </nav>
-    <!--Gets the library of icon svgs from the open source ionicon project so I don't have to store them all.-->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <nav class="menu">
+            <div class="toggle"><ion-icon name="add"></ion-icon></div>
+            <ul>
+                <li style="--i:0;">
+                    <a href="./index.html"><ion-icon name="home-outline"></ion-icon></a>
+                </li>
+                <li style="--i:1;">
+                    <a href="./pages/audio.html"><ion-icon name="musical-notes-outline"></ion-icon></a>
+                </li>
+                <li style="--i:2;">
+                    <a href="./pages/art.html"><ion-icon name="brush-outline"></ion-icon></a>
+                </li>
+                <li style="--i:3;">
+                    <a href="./pages/code.html"><ion-icon name="code-outline"></ion-icon></a>
+                </li>
+                <li style="--i:4;">
+                    <a href="./pages/photography.html"><ion-icon name="camera-outline"></ion-icon></a>
+                </li>
+                <li style="--i:5;">
+                    <a href="./pages/contact.html"><ion-icon name="mail-outline"></ion-icon></a>
+                </li>
+            </ul>
+        </nav>
 
-    <script>
-        let toggle = document.querySelector('.toggle')
-        let menu = document.querySelector('.menu')
-        toggle.onclick = function(){
-            menu.classList.toggle('active')
-        }
-    </script>
-</body>
+        <footer>
+            <a href="https://github.com/SpazBot"><ion-icon size="large" name="logo-github"></ion-icon></a>
+        </footer>
+
+        <!--Gets the library of icon svgs from the open source ionicon project so I don't have to store them all.-->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script>
+            let toggle = document.querySelector('.toggle')
+            let menu = document.querySelector('.menu')
+            toggle.onclick = function(){
+                menu.classList.toggle('active')
+            }
+        </script>
+    </body>
+</html>

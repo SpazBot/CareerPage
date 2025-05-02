@@ -1,3 +1,7 @@
+/*
+Developed by Erik Dohr for CWB1010
+*/
+
 /*CSS Reset Rule*/
 *
 {
@@ -103,6 +107,7 @@ body
     padding: 2%;
     height: fit-content;
     align-self: center;
+    text-shadow: 2px 2px 2px black;
 }
 
 .glassWrapper .contentDiv
@@ -122,7 +127,7 @@ h2
 
 h3
 {
-    font-family: "Edu QLD Beginner", cursive;
+    font-family: "Edu QLD Beginner", sans-serif;
     font-size: 3vw;
     font-weight: bold;
     color: #ffffff;
@@ -130,7 +135,7 @@ h3
 
 p
 {
-    font-family: "Edu QLD Beginner", cursive;
+    font-family: "Edu QLD Beginner", sans-serif;
     font-weight: normal;
     font-size: 3vw;
     color: #ffffff;
@@ -219,16 +224,36 @@ p
     font-weight: bolder;
 }
 
+.glassWrapper .albumCollection
+{
+    display: block;
+}
+
+.albumCollection figure{
+    position: relative;
+    max-width: 60vw;
+    border-radius: 2%;
+    background-color: rgb(27, 25, 31);
+    color: white;
+    transition: box-shadow 0.3s ease;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    margin: 1%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .albumCollection figcaption{
     display: none;
+    position: relative;
 }
 
 .albumCollection figure:hover 
 {
+    z-index: 1000;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     transform: scale(1.5);
-    z-index: 1000;
     animation-duration: 1s;
     animation-name: appear;
     animation-direction: alternate;
@@ -240,11 +265,12 @@ p
 }
 
 .albumCollection figure:hover figcaption{
+    z-index: auto;
     display: block;
     padding: 2%;
-    font-family: "Edu QLD Beginner", cursive;
+    font-family: "Edu QLD Beginner", sans-serif;
     font-weight: 400;
-    font-size: 3vw;
+    font-size: 5em;
 }
 
 .glassWrapper .photoGallery
@@ -268,12 +294,33 @@ p
 
 .glassWrapper .artGallery img
 {
+    display: block;
     max-width: 100%;
+    border-radius: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.glassWrapper .artGallery img:hover
-{
-    transform: scale(1.2);
+article{
+    padding: 1%;
+}
+
+article:first-of-type{
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+
+article:nth-of-type(odd){
+    background-color: rgba(255, 255, 255, 0.1)
+}
+
+article:nth-of-type(even){
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+article:last-of-type{
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
 }
 
 #cubeTutorial
@@ -283,6 +330,13 @@ p
     margin-left: auto;
     margin-right: auto;
     display: block;
+    width: auto;
+    height: auto;
+}
+
+footer{
+    position: sticky;
+    bottom: 1%;
 }
 
 /*Style for main menu node*/
@@ -365,16 +419,11 @@ p
 .glassWrapper .albumCollection
 {
     grid-row: 2;
-    display: inline-block;
+    display: block;
     padding: 5%;
     margin-bottom: 20%;
     clear: left;
     height: auto;
-}
-
-.albumCollection figure
-{
-    margin: 1%;
 }
 
 .album
@@ -390,16 +439,6 @@ p
     width:60vw;
 }
 
-.albumCollection figure{
-    max-width: 60vw;
-    border-radius: 2%;
-    background-color: rgb(27, 25, 31);
-    color: white;
-    transition: box-shadow 0.3s ease;
-    transform: scale(1);
-    transition: transform 0.3s ease;
-}
-
 input{
     width: 50vw;
     margin: 1%;
@@ -409,7 +448,7 @@ input{
 input[type=text]{
     border: 2px solid gray;
     border-radius: 4px;
-    color: white;
+    color: black;
 }
 
 textarea {
@@ -428,8 +467,7 @@ textarea {
   }
 
 /*Medium Devices (tablets)*/
-@media screen and (min-width: 768px) {
-    /*Small devices (Phones)*/
+@media (min-width: 768px), screen and (orientation: landscape) {
     
     .indexTiles
     {
@@ -437,7 +475,42 @@ textarea {
         grid-template-columns: auto auto auto auto;
         gap: 10px;
     }
-    
+
+    .albumCollection figure:hover figcaption{
+        display: block;
+        padding: 2%;
+        font-family: "Edu QLD Beginner", sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+    }
+}
+
+/* Large devices (desktops)*/
+@media (min-width: 992px), screen and (orientation: landscape) {
+    /*Large display text content styling*/
+    h2
+    {
+        font-family: 'Courier New', Courier, serif;
+        font-size: 3vw;
+        color: #ffffff;
+    }
+
+    h3
+    {
+        font-family: "Edu QLD Beginner", serif;
+        font-size: 2vw;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    p
+    {
+        font-family: "Edu QLD Beginner", monospace;
+        font-weight: normal;
+        font-size: 1.5em;
+        color: #ffffff;
+    }
+
     .glassWrapper .albumCollection
     {
         grid-row: 2;
@@ -455,8 +528,6 @@ textarea {
     {
         max-width: 20vw;
         max-height: 40vw;
-        border: 4px solid rgb(27, 25, 31);
-        border-radius: 2%;
     }
 
     .albumCollection audio
@@ -466,53 +537,12 @@ textarea {
 
     .albumCollection figure{
         max-width: 20vw;
-        border-radius: 2%;
-        background-color: rgb(27, 25, 31);
-        color: white;
-        transition: box-shadow 0.3s ease;
-        transform: scale(1);
-        transition: transform 0.3s ease;
-        margin: 0;
-    }
-
-    .albumCollection figure:hover figcaption{
-        display: block;
-        padding: 2%;
-        font-family: "Edu QLD Beginner", cursive;
-        font-weight: 400;
-        font-size: 1vw;
-    }
-}
-
-/* Large devices (desktops)*/
-@media (min-width: 992px) {
-    /*Large display text content styling*/
-    h2
-    {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 3vw;
-        color: #ffffff;
-    }
-
-    h3
-    {
-        font-family: "Edu QLD Beginner", cursive;
-        font-size: 2vw;
-        font-weight: bold;
-        color: #ffffff;
-    }
-
-    p
-    {
-        font-family: "Edu QLD Beginner", cursive;
-        font-weight: normal;
-        font-size: 1vw;
-        color: #ffffff;
+        margin-bottom: 0;
     }
     
 }
 
 /* Extra large devices (large desktops)*/
-@media (min-width: 1200px) {
+@media (min-width: 1200px), screen and (orientation: landscape) {
     
 }
