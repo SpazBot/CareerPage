@@ -20,6 +20,22 @@
 
     <div class="glassWrapper">
         <article>
+            <h3>Edge Computing & MQTT Security</h3>
+            <p>
+                Hi Everyone! Sorry it's been a while since my last post. I've been focused on my college capstone assignment. Speaking of, let's talk about Edge Computing and the internet of things.
+                Back in the late 2000's, Cloud Computing hit the mainstream and realized a dream that had begun back in the 1960's with enterprise level mainframes. The rapid ascent of 
+                software, platforms, and even infrastructure as a service meant that developing enterprise scale systems and applications was now available to everyone; professionals and hobbyists alike.
+                However as time has passed and global data usage on these systems spans into the zettabytes, new concerns have arisen. How can we quickly access and process data on a cloud server from 
+                half a world away? How can we keep that data secure in the face of annual data breaches? How can we take back scalable systems and sensitive data from the hands of global corporations 
+                and put it back in the hands of users?
+                <br>
+                In my latest project, I've been exploring these questions from a secure software development perspective using Arduino boards and a software stack including Eclipse Mosquitto, IBM's Node
+                RED, InfluxDB, and Grafana. I also got to reinforce some of the skills from my previous Web Application Security work using network analysis tools like Wireshark and OpenSSL.
+            </p>
+            <img id="IoTdiagram" src="../assets/Diagrams/IoTstack.png" alt="IoT Stack Diagram">
+        </article>
+
+        <article>
             <h3>Web Application Security and OWASP Juice Shop</h3>
             <p>
                 Once you've learned the foundational principles of software developement, learning cybersecurity can seem like starting a daunting task all over again.
@@ -54,15 +70,6 @@
                 This little beauty is the product of two tech marvels: the WebGL JavaScript API which allows for the rendering of interactive
                 2D & 3D graphics without plugins, and Three.js library which greatly simplifies the 3D part of that equation. 
             </p>
-            <!--<script id="cubeTutorial" type="module" src="../scripts/cube.js"></script>-->
-            <script type="importmap">
-                {
-                  "imports": {
-                    "three": "https://unpkg.com/three/build/three.module.js",
-                    "three/addons/": "https://unpkg.com/three/examples/jsm/"
-                  }
-                }
-              </script>
             <p>
                 While this isn't anything revolutionary (in fact it's the basic tutorial for using Three.js), it's new and incredibly exciting to me.
             </p>
@@ -102,6 +109,8 @@
         <a href="https://github.com/SpazBot"><ion-icon size="large" name="logo-github"></ion-icon></a>
     </footer>
 
+    <script type="module" src="../scripts/cube.js"></script>
+    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
